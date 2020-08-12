@@ -4,21 +4,26 @@ package com.changgou.entity;
  * @Author:www.itheima.com
  * @Description:
  *****/
-public class CacheKey {
+public enum  CacheKey {
 
     /**
      * 商品分类
      */
-    public static String CATEGORY="CATEGORY";
+    CATEGORY("CATEGORY"),
 
     /**
      * 品牌缓存
      */
-    public static String BRAND="BRAND";
+    BRAND("BRAND"),
 
     /**
      * 规格
      */
-    public static String SPEC="SPEC";
+    SPEC("SPEC");
 
+    private CacheKey(String text) {
+        this.text = text;
+    }
+
+    private String text;
 }
